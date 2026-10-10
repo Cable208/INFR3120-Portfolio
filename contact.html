@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the website adjust properly to different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text that appears on the browser tab -->
+    <title>Contact Me | Caleb Agyei</title>
+
+    <!-- Computer stylesheet for screens 960px and larger -->
+    <link rel="stylesheet" href="css/computer.css"
+          media="only screen and (min-width: 960px)">
+
+    <!-- Tablet stylesheet for screens between 481px and 959px -->
+    <link rel="stylesheet" href="css/tablet.css"
+          media="only screen and (min-width: 481px) and (max-width: 959px)">
+
+    <!-- Mobile stylesheet for screens 480px and smaller -->
+    <link rel="stylesheet" href="css/mobile.css"
+          media="only screen and (max-width: 480px)">
+
+</head>
+
+<body>
+
+    <!-- Header contains my name, program information, and navigation links -->
+    <header>
+
+        <h1>Caleb Agyei</h1>
+
+        <p>Information Technology Student | Networking & IT Security</p>
+
+        <!-- Navigation links to the four portfolio pages -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </nav>
+
+    </header>
+
+<!-- Main content for the Contact Me Page-->
+
+<main> 
+
+    <section>
+        <h2>Contact Me</h2>
+        <p> 
+            If you would like to get in touch with me,
+            please fill out the form below
+        </p>
+
+        <form> 
+            <!--Name Field-->
+            <p>
+                <label for = "name" >Name:</label><br>
+
+                <input type="text"
+                        id="name"
+                        name="name"
+                        required>
+            </p>
+
+
+
+            <!--Email Field-->
+            <p>
+                <label for = "email" >Email:</label><br>
+
+                <input type="email"
+                        id="email"
+                        name="email"
+                        required>
+            
+                        <!-- Cell number field -->
+                <p>
+                    <label for="phone">Cell Number:</label><br>
+
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           pattern="[0-9]{10}"
+                           placeholder="9051234567"
+                           required>
+                </p>
+
+
+
+
+                <!-- Comments field -->
+                <p>
+                    <label for="comments">Comments:</label><br>
+
+                    <textarea id="comments"
+                              name="comments"
+                              rows="6"
+                              required></textarea>
+                </p>
+
+
+                <!-- Submit button -->
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+
+            </form>
+
+            </p>
+        </form>
+    </section>
+</main>
+
+ <!-- Footer contains contact information and copyright -->
+    <footer>
+
+        <p>Email: caleb.agyei@ontariotechu.net</p>
+
+        <p>&copy; 2026 Caleb Agyei</p>
+
+    </footer>
+
+</body>
+
+</html>

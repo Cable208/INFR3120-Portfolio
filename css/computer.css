@@ -21,7 +21,10 @@ main{
     padding: 20px;
     background-color: #FFFFFF;
     /* Keeps the main area tall enough so the footer stays near the bottom */
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 159px);
+
+    /* Makes the main section expand around floated project cards */
+    overflow: auto;
 }
 
 header {
@@ -66,16 +69,104 @@ nav a:hover {
     color: #FC4D00;
 }
 
+/* ==================================
+   HOME PAGE
+   ================================== */
+#welcome {
+    padding: 25px;
+
+    /* Angled gradient used for the welcome section */
+    background: linear-gradient(
+        135deg,
+        #FFFFFF,
+        #a08e85
+    );
+}
 
 footer {
     background-color: #332C29;
     color: white;
 
     text-align: center;
-    padding: 6px;
+    padding: 3px;
 
     /* Keeps the footer underneath floated project boxes */
     clear: both;
+}
 
+/* Reduces the default spacing around the footer paragraphs */
+footer p {
+    margin: 3px;
+}
 
+/* ==================================
+   ABOUT PAGE
+   ================================== */
+
+   /* Controls the size of my profile image on computer screens*/
+   #about-photo {
+    width: 220px;
+    height: auto;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+   }
+
+   /*Keeps the introduction video at reasonable size*/
+   video
+    {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+
+    margin-top: 10px;
+    margin-bottom: 20px;    
+
+    border-radius: 8px;
+}
+
+    /* ==================================
+   PROJECTS PAGE
+   ================================== */
+/* Keeps the floated project cards inside the Projects section */
+#projects {
+    overflow: auto;
+}
+
+/* Styles each project as a separate card */
+.project {
+    width: 46%;
+    float: left;
+
+    margin: 2%;
+    padding: 20px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #96573C;
+    border-radius: 8px;
+
+    /* Keeps project cards more even when descriptions have different lengths */
+    min-height: 310px;
+}
+
+/* Gives each project title more separation from the description */
+.project h3 {
+    color: #63483C;
+
+    border-bottom: 1px solid #C95928;
+    padding-bottom: 10px;
+}
+
+/* Makes project images fit inside their project card */
+.project img {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 10px;
+
+    border-radius: 6px;
 }

@@ -236,7 +236,7 @@ textarea {
 input[type="submit"] {
     width: 130px;
 
-    background-color: #C95928;
+    background-color: #63483C;
     color: white;
 
     border: none;
@@ -247,7 +247,7 @@ input[type="submit"] {
 
 /* Changes the button colour when the user hovers over it */
 input[type="submit"]:hover {
-    background-color: #63483C;
+    background-color: #332C29;
 }
 
 

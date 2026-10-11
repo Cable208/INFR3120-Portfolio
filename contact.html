@@ -9,7 +9,7 @@
     <!-- Makes the website adjust properly to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Text that appears on the browser tab -->
+    <!-- Text shown on the browser tab -->
     <title>Contact Me | Caleb Agyei</title>
 
     <!-- Computer stylesheet for screens 960px and larger -->
@@ -45,40 +45,46 @@
 
     </header>
 
-<!-- Main content for the Contact Me Page-->
 
-<main> 
+    <!-- Main content for the Contact Me page -->
+    <main>
 
-    <section>
-        <h2>Contact Me</h2>
-        <p> 
-            If you would like to get in touch with me,
-            please fill out the form below
-        </p>
+        <!-- Contains the contact form and required user input fields -->
+        <section id="contact">
 
-        <form> 
-            <!--Name Field-->
+            <h2>Contact Me</h2>
+
             <p>
-                <label for = "name" >Name:</label><br>
-
-                <input type="text"
-                        id="name"
-                        name="name"
-                        required>
+                If you would like to get in touch with me,
+                please fill out the form below.
             </p>
 
+            <!-- Contact form uses HTML validation through required fields and input types -->
+            <form>
+
+                <!-- Name field -->
+                <p>
+                    <label for="name">Name:</label><br>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required>
+                </p>
 
 
-            <!--Email Field-->
-            <p>
-                <label for = "email" >Email:</label><br>
+                <!-- Email field uses the email input type for basic validation -->
+                <p>
+                    <label for="email">Email:</label><br>
 
-                <input type="email"
-                        id="email"
-                        name="email"
-                        required>
-            
-                        <!-- Cell number field -->
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required>
+                </p>
+
+
+                <!-- Cell number field requires a 10-digit phone number -->
                 <p>
                     <label for="phone">Cell Number:</label><br>
 
@@ -91,9 +97,7 @@
                 </p>
 
 
-
-
-                <!-- Comments field -->
+                <!-- Comments field allows the user to enter a longer message -->
                 <p>
                     <label for="comments">Comments:</label><br>
 
@@ -104,19 +108,19 @@
                 </p>
 
 
-                <!-- Submit button -->
+                <!-- Submit button sends the form after validation requirements are met -->
                 <p>
                     <input type="submit" value="Submit">
                 </p>
 
             </form>
 
-            </p>
-        </form>
-    </section>
-</main>
+        </section>
 
- <!-- Footer contains contact information and copyright -->
+    </main>
+
+
+    <!-- Footer contains contact information and copyright -->
     <footer>
 
         <p>Email: caleb.agyei@ontariotechu.net</p>

@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/* Keeps padding and borders inside the assigned element widths */
+* {
+    box-sizing: border-box;
+}
+
+/* Sets the base font, page colours, and removes the browser's default body margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F1EF;
+    color: #332C29;
+}
+
+
+/* ==================================
+   MAIN LAYOUT
+   ================================== */
+
+/* Centers the main content and gives it more width on tablet screens */
+main {
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 18px;
+    background-color: #FFFFFF;
+
+    /* Keeps the footer near the bottom on pages with less content */
+    min-height: calc(100vh - 155px);
+
+    /* Allows the main area to contain floated elements properly */
+    overflow: auto;
+}
+
+
+/* ==================================
+   HEADER AND NAVIGATION
+   ================================== */
+
+/* Uses the same Adobe colour scheme gradient as the desktop layout */
+header {
+    color: white;
+    padding: 6px;
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #332C29,
+        #63483C
+    );
+}
+
+header h1 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+header p {
+    margin-top: 1px;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+/* Keeps navigation links readable while using slightly less spacing on tablets */
+header nav a {
+    color: white;
+
+    margin-left: 7px;
+    margin-right: 7px;
+
+    text-decoration: none;
+}
+
+/* Changes the navigation link colour when hovered over */
+nav a:hover {
+    color: #FC4D00;
+}
+
+
+/* ==================================
+   HOME PAGE
+   ================================== */
+
+/* Uses an angled gradient to separate the welcome section visually */
+#welcome {
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF,
+        #a08e85
+    );
+}
+
+
+/* ==================================
+   ABOUT PAGE
+   ================================== */
+
+/* Keeps the profile photo and video grouped together */
+#about-top {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+/* Reduces the profile image size so it fits comfortably on tablet screens */
+#about-photo {
+    width: 180px;
+    height: 250px;
+
+    object-fit: cover;
+
+    margin-right: 15px;
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    vertical-align: top;
+}
+
+/* Reduces the introduction video size while keeping the full portrait video visible */
+#about-video {
+    width: 180px;
+    height: 250px;
+
+    object-fit: contain;
+
+    margin-bottom: 18px;
+
+    vertical-align: top;
+    float: right;
+}
+
+/* Keeps the biography text below the photo and video */
+#about-text {
+    clear: both;
+}
+
+/* Prevents the portrait video from being cropped in fullscreen */
+#about-video:fullscreen {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background-color: black;
+}
+
+
+/* ==================================
+   PROJECTS PAGE
+   ================================== */
+
+/* Stacks project cards into one column on tablet screens */
+.project {
+    width: 90%;
+    float: none;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    padding: 18px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #96573C;
+    border-radius: 8px;
+}
+
+/* Styles the project title and separates it from the project description */
+.project h3 {
+    color: #63483C;
+
+    border-bottom: 1px solid #C95928;
+    padding-bottom: 10px;
+
+    margin-top: 0;
+}
+
+/* Improves readability of project descriptions */
+.project p {
+    line-height: 1.4;
+}
+
+
+/* ==================================
+   CONTACT PAGE
+   ================================== */
+
+/* Centers the contact section and prevents it from becoming too wide */
+#contact {
+    width: 85%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+/* Keeps the form slightly narrower than the contact section */
+form {
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+}
+
+/* Gives all form fields a consistent appearance */
+input,
+textarea {
+    width: 100%;
+
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    border: 1px solid #96573C;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Sets a comfortable height for the comments box */
+textarea {
+    height: 90px;
+}
+
+/* Styles the submit button separately from the other form fields */
+input[type="submit"] {
+    width: 130px;
+
+    background-color: #C95928;
+    color: white;
+
+    border: none;
+    padding: 9px;
+
+    cursor: pointer;
+}
+
+/* Changes the button colour when the user hovers over it */
+input[type="submit"]:hover {
+    background-color: #FC4D00;
+}
+
+
+/* ==================================
+   FOOTER
+   ================================== */
+
+/* Keeps the footer below floated content and matches the site colour scheme */
+footer {
+    background-color: #332C29;
+    color: white;
+
+    text-align: center;
+    padding: 4px;
+
+    clear: both;
+}
+
+/* Reduces the default spacing around footer text */
+footer p {
+    margin: 3px;
+}

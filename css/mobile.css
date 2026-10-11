@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* Keeps padding and borders inside the assigned element widths */
+* {
+    box-sizing: border-box;
+}
+
+/* Sets the base font, page colours, and removes the default body margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F1EF;
+    color: #332C29;
+}
+
+
+/* ==================================
+   MAIN LAYOUT
+   ================================== */
+
+/* Uses most of the screen width while keeping small margins on mobile */
+main {
+    width: 94%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 14px;
+    background-color: #FFFFFF;
+
+    /* Keeps the footer near the bottom on shorter mobile pages */
+    min-height: calc(100vh - 135px);
+
+    /* Allows the main section to contain floated elements properly */
+    overflow: auto;
+}
+
+
+/* ==================================
+   HEADER AND NAVIGATION
+   ================================== */
+
+/* Uses the same Adobe colour scheme gradient as the larger layouts */
+header {
+    color: white;
+    padding: 5px;
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #332C29,
+        #63483C
+    );
+}
+
+header h1 {
+    font-size: 24px;
+
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+header p {
+    font-size: 13px;
+
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+nav {
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+/* Keeps the navigation links horizontal while reducing spacing for mobile */
+nav a {
+    display: inline-block;
+
+    color: white;
+    text-decoration: none;
+
+    margin-left: 4px;
+    margin-right: 4px;
+
+    font-size: 13px;
+}
+
+/* Changes the navigation link colour when hovered over */
+nav a:hover {
+    color: #FC4D00;
+}
+
+
+/* ==================================
+   HOME PAGE
+   ================================== */
+
+/* Uses an angled gradient to visually separate the welcome section */
+#welcome {
+    padding: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF,
+        #a08e85
+    );
+}
+
+
+/* ==================================
+   ABOUT PAGE
+   ================================== */
+
+/* Keeps the profile photo and introduction video grouped together */
+#about-top {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* Reduces the profile photo size so it fits comfortably on mobile */
+#about-photo {
+    width: 150px;
+    height: 210px;
+
+    object-fit: cover;
+
+    margin-right: 6px;
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    vertical-align: top;
+}
+
+/* Keeps the video compact and positions it on the right side */
+#about-video {
+    width: 150px;
+    height: 210px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+    vertical-align: top;
+    float: right;
+}
+
+/* Keeps the biography text below the image and video */
+#about-text {
+    clear: both;
+}
+
+/* Reduces paragraph text slightly for smaller screens */
+main p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Prevents the portrait video from being cropped in fullscreen */
+#about-video:fullscreen {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background-color: black;
+}
+
+
+/* ==================================
+   PROJECTS PAGE
+   ================================== */
+
+/* Displays one project card per row on mobile */
+.project {
+    width: 100%;
+    float: none;
+
+    margin-bottom: 16px;
+    padding: 15px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #96573C;
+    border-radius: 8px;
+}
+
+/* Styles the project title and separates it from the description */
+.project h3 {
+    color: #63483C;
+
+    border-bottom: 1px solid #C95928;
+    padding-bottom: 8px;
+
+    margin-top: 0;
+}
+
+/* Improves readability of project descriptions */
+.project p {
+    line-height: 1.4;
+}
+
+
+/* ==================================
+   CONTACT PAGE
+   ================================== */
+
+/* Allows the contact section to use the full available mobile width */
+#contact {
+    width: 100%;
+    text-align: center;
+}
+
+/* Makes the contact form use the full width of the contact section */
+form {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+}
+
+/* Gives the form fields a consistent appearance */
+input,
+textarea {
+    width: 100%;
+
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    border: 1px solid #96573C;
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Sets a comfortable height for the comments box */
+textarea {
+    height: 85px;
+}
+
+/* Styles the submit button separately from the other form fields */
+input[type="submit"] {
+    width: 120px;
+
+    background-color: #C95928;
+    color: white;
+
+    border: none;
+    padding: 9px;
+
+    cursor: pointer;
+}
+
+/* Changes the button colour when the user hovers over it */
+input[type="submit"]:hover {
+    background-color: #FC4D00;
+}
+
+
+/* ==================================
+   FOOTER
+   ================================== */
+
+/* Keeps the footer below floated content and matches the site colour scheme */
+footer {
+    background-color: #332C29;
+    color: white;
+
+    text-align: center;
+    padding: 4px;
+
+    clear: both;
+}
+
+/* Reduces footer spacing and text size for mobile screens */
+footer p {
+    margin: 3px;
+    font-size: 13px;
+}

@@ -1,17 +1,20 @@
 @charset "UTF-8";
 
-*{
+/* Applies border-box sizing so padding and borders stay inside set widths */
+* {
     box-sizing: border-box;
 }
 
+/* Sets the main font, text colour, and page background */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-        background-color: #F4F1EF;
+    background-color: #F4F1EF;
     color: #332C29;
 }
 
-main{
+/* Centers the main content and keeps it readable on larger screens */
+main {
     width: 80%;
     max-width: 1000px;
 
@@ -20,28 +23,32 @@ main{
 
     padding: 20px;
     background-color: #FFFFFF;
-    /* Keeps the main area tall enough so the footer stays near the bottom */
+
+    /* Keeps shorter pages tall enough so the footer stays near the bottom */
     min-height: calc(100vh - 159px);
 
-    /* Makes the main section expand around floated project cards */
+    /* Allows the main section to expand around floated project cards */
     overflow: auto;
 }
 
+/* ==================================
+   HEADER AND NAVIGATION
+   ================================== */
+
+/* Uses colours from my Adobe colour scheme in a vertical linear gradient */
 header {
-    color:white;
+    color: white;
     padding: 5px;
     text-align: center;
 
-    /*The use of linear Gradients with list of colours from my Adobe colour scheme*/
     background: linear-gradient(
         to bottom,
         #332C29,
         #63483C
     );
-    
 }
 
-    header h1 {
+header h1 {
     margin-top: 5px;
     margin-bottom: 3px;
 }
@@ -64,18 +71,20 @@ header nav a {
     text-decoration: none;
 }
 
-/* Gives the user visual feedback when hovering over a link */
+/* Gives the user visual feedback when hovering over a navigation link */
 nav a:hover {
     color: #FC4D00;
 }
 
+
 /* ==================================
    HOME PAGE
    ================================== */
+
+/* Uses an angled gradient to visually separate the welcome section */
 #welcome {
     padding: 25px;
 
-    /* Angled gradient used for the welcome section */
     background: linear-gradient(
         135deg,
         #FFFFFF,
@@ -83,60 +92,63 @@ nav a:hover {
     );
 }
 
-footer {
-    background-color: #332C29;
-    color: white;
-
-    text-align: center;
-    padding: 3px;
-
-    /* Keeps the footer underneath floated project boxes */
-    clear: both;
-}
-
-/* Reduces the default spacing around the footer paragraphs */
-footer p {
-    margin: 3px;
-}
 
 /* ==================================
    ABOUT PAGE
    ================================== */
 
-   /* Controls the size of my profile image on computer screens*/
-   #about-photo {
+/* Places the profile photo on the left side of the page */
+#about-photo {
     width: 220px;
-    height: auto;
+    height: 320px;
+
+    float: left;
+
+    /* Fills the image area without stretching the photo */
+    object-fit: cover;
 
     margin-top: 10px;
     margin-bottom: 20px;
 
     border-radius: 8px;
+}
 
-   }
+/* Places the introduction video on the right at the same size as the photo */
+#about-video {
+    width: 220px;
+    height: 320px;
 
-   /*Keeps the introduction video at reasonable size*/
-   video
-    {
-    width: 250px;
-    max-width: 100%;
-    height: auto;
+    float: right;
+
+    /* Displays the full portrait video without cropping it */
+    object-fit: contain;
 
     margin-top: 10px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 
     border-radius: 8px;
 }
 
-    /* ==================================
-   PROJECTS PAGE
-   ================================== */
-/* Keeps the floated project cards inside the Projects section */
-#projects {
-    overflow: auto;
+/* Prevents the portrait video from being cropped when viewed fullscreen */
+#about-video:fullscreen {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background-color: black;
 }
 
-/* Styles each project as a separate card */
+/* Keeps the biography text underneath the photo and video */
+#about-text {
+    clear: both;
+}
+
+
+/* ==================================
+   PROJECTS PAGE
+   ================================== */
+
+/* Creates project cards and places two cards beside each other on desktop */
 .project {
     width: 46%;
     float: left;
@@ -149,24 +161,90 @@ footer p {
     border: 1px solid #96573C;
     border-radius: 8px;
 
-    /* Keeps project cards more even when descriptions have different lengths */
-    min-height: 310px;
+    /* Keeps project cards a more consistent height */
+    min-height: 260px;
 }
 
-/* Gives each project title more separation from the description */
+/* Starts each new pair of project cards on a new row */
+.project:nth-of-type(odd) {
+    clear: left;
+}
+
+/* Styles the project title and separates it from the description */
 .project h3 {
     color: #63483C;
 
     border-bottom: 1px solid #C95928;
     padding-bottom: 10px;
+
+    margin-top: 0;
 }
 
-/* Makes project images fit inside their project card */
-.project img {
-    width: 100%;
-    height: auto;
+/* Improves readability of the project descriptions */
+.project p {
+    line-height: 1.4;
+}
 
+
+/* ==================================
+   CONTACT PAGE
+   ================================== */
+
+/* Keeps the contact form from stretching too wide on larger screens */
+form {
+    width: 60%;
+}
+
+/* Gives the form fields a consistent appearance */
+input,
+textarea {
+    width: 100%;
+
+    padding: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
 
+    border: 1px solid #96573C;
     border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Styles the submit button separately from the other form fields */
+input[type="submit"] {
+    width: 140px;
+
+    background-color: #C95928;
+    color: white;
+
+    border: none;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+/* Changes the submit button colour when the user hovers over it */
+input[type="submit"]:hover {
+    background-color: #FC4D00;
+}
+
+
+/* ==================================
+   FOOTER
+   ================================== */
+
+/* Keeps the footer underneath floated content such as project cards */
+footer {
+    background-color: #332C29;
+    color: white;
+
+    text-align: center;
+    padding: 3px;
+
+    clear: both;
+}
+
+/* Reduces the default spacing around the footer paragraphs */
+footer p {
+    margin: 3px;
 }

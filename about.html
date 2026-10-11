@@ -9,7 +9,7 @@
     <!-- Makes the website adjust properly to different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Text that appears on the browser tab -->
+    <!-- Text shown on the browser tab -->
     <title>About Me | Caleb Agyei</title>
 
     <!-- Computer stylesheet for screens 960px and larger -->
@@ -26,10 +26,16 @@
 
 </head>
 
-<body> 
+<body>
+
+    <!-- Header contains my name, program information, and site navigation -->
     <header>
+
         <h1>Caleb Agyei</h1>
-        <p>Information Technology Student | Networking & IT Security</p>
+
+        <p>
+            Information Technology Student | Networking & IT Security
+        </p>
 
         <!-- Navigation links to the four portfolio pages -->
         <nav>
@@ -41,59 +47,77 @@
 
     </header>
 
-    <!-- Main Content for About Me-->
-<main>
 
-    <section>
+    <!-- Main content for the About Me page -->
+    <main>
 
-        <h2>About Me</h2>
+        <!-- Contains my profile media and personal introduction -->
+        <section id="about-section">
 
-        <img id="about-photo"
-            src="images/portfolio_headshot.jpeg"
-             alt="Professional headshot of Caleb Agyei">
+            <h2>About Me</h2>
 
-            <p> My name is Caleb Agyei, i'm a 23 year old aspiring cybersecuirty Professional
-                currently studying at Ontario Tech University.
-            </p>
+            <!-- Keeps the profile photo and introduction video grouped together -->
+            <div id="about-top">
 
-            <p> 
-                Besides a love for solving technical problems, I also enjoy staying active through sports
-                like basketball, soccer, and tennis. I enjoy cooking and playing the piano too!
-            </p>
+                <img id="about-photo"
+                     src="images/portfolio_headshot.jpeg"
+                     alt="Professional headshot of Caleb Agyei">
 
-            <p> 
-                My career goal is to continue building my technical and
-                communication skills and pursue opportunities in areas such as
-                cybersecurity with a  focus on IT governance risk and compliance, technical consulting, and solutions engineering.
-            </p>
+                <!-- HTML5 introduction video with controls and poster image -->
+                <video id="about-video"
+                       controls
+                       poster="images/video-poster.png">
 
-    </section>
+                    <source src="video/Introduction_portfolio.mp4"
+                            type="video/mp4">
 
-    <!-- Section containing my short introduction video -->
-        <section>
+                    Your browser does not support the video element.
 
-            <h2>Introduction Video</h2>
+                </video>
 
-            <video controls poster="images/video-poster.jpg">
+            </div>
 
-                <source src="video/Introduction_portfolio.mp4"
-                        type="video/mp4">
 
-                Your browser does not support the video element.
+            <!-- Personal background, interests, and career goals -->
+            <div id="about-text">
 
-            </video>
+                <p>
+                    My name is Caleb Agyei, I'm a 23-year-old aspiring
+                    cybersecurity professional currently studying at
+                    Ontario Tech University.
+                </p>
+
+                <p>
+                    Besides a love for solving technical problems, I also
+                    enjoy staying active through sports like basketball,
+                    soccer, and tennis. I enjoy cooking and playing the
+                    piano too!
+                </p>
+
+                <p>
+                    My career goal is to continue building my technical
+                    and communication skills and pursue opportunities in
+                    areas such as cybersecurity with a focus on IT
+                    governance, risk and compliance, technical consulting,
+                    and solutions engineering.
+                </p>
+
+            </div>
 
         </section>
-</main>
 
- <footer>
+    </main>
 
-        <p>caleb.agyei@ontariotechu.net <p>
+
+    <!-- Footer contains contact information and copyright -->
+    <footer>
+
+        <p>caleb.agyei@ontariotechu.net</p>
 
         <p>&copy; 2026 Caleb Agyei</p>
 
     </footer>
 
-
 </body>
+
 </html>

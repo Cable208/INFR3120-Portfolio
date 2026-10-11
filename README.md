@@ -528,43 +528,49 @@ The final HTML and CSS were reviewed, adjusted, and implemented by me, and I ens
 
 ## Testing and Validation
 
-The website is designed to be tested using the following tools:
+The website was tested using the following tools:
 
 ### W3C HTML Validator
 
-Used to check the HTML files for syntax, structural, and markup errors.
+The HTML files were checked for syntax, structural, and markup errors.
 
-Pages to validate:
+The following pages were validated:
 
 - `index.html`
 - `about.html`
 - `projects.html`
 - `contact.html`
 
+All four HTML pages passed validation with no errors.
+
 ### W3C CSS Validator
 
-Used to check the three CSS stylesheets for CSS syntax errors.
+The CSS files were checked for CSS syntax errors.
 
-Stylesheets to validate:
+The following stylesheets were validated:
 
 - `computer.css`
 - `tablet.css`
 - `mobile.css`
 
+All three CSS stylesheets passed validation with no errors.
+
 ### W3C Link Checker
 
-Used to confirm that links between the pages of the portfolio work correctly.
+The W3C Link Checker was used to confirm that the navigation links and anchors worked correctly.
 
-Navigation links tested include:
+The following navigation links were tested:
 
 - Home
 - About Me
 - Projects
 - Contact Me
 
+The link checker reported valid links and valid anchors.
+
 ### WAVE Accessibility Evaluation Tool
 
-Used to review the website for accessibility issues.
+WAVE was used to review the website for accessibility issues.
 
 Accessibility features included in the website include:
 
@@ -573,10 +579,19 @@ Accessibility features included in the website include:
 - Form labels connected to form controls
 - Clear navigation links
 - Structured headings
+- Improved text and button colour contrast
+
+The Home and Projects pages showed no accessibility errors, contrast errors, or alerts.
+
+The About Me page showed no accessibility errors or contrast errors. WAVE displayed one alert related to the HTML5 video element.
+
+The Contact Me page originally displayed a contrast issue on the submit button. The button colours were adjusted to improve the contrast, and the issue was corrected.
 
 ### Responsive Testing
 
-The website is tested at computer, tablet, and mobile viewport sizes to confirm that:
+The website was tested at computer, tablet, and mobile viewport sizes.
+
+Testing confirmed that:
 
 - Content remains readable
 - Navigation remains usable
@@ -587,8 +602,7 @@ The website is tested at computer, tablet, and mobile viewport sizes to confirm 
 
 ### Spelling Review
 
-The visible content and project descriptions are reviewed for spelling and grammar before submission.
-
+The visible website content and project descriptions were reviewed for spelling and grammar before final submission.
 ---
 
 ## Project File Structure

@@ -255,7 +255,7 @@ input[type="submit"] {
 
 /* Changes the button colour when the user hovers over it */
 input[type="submit"]:hover {
-    background-color: #332C29;
+    background-color: #63483C;
 }
 
 

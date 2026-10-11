@@ -619,7 +619,7 @@ INFR3120-Portfolio/
 
 The project is stored in a public GitHub repository.
 
-Repository:
+Repository:https://github.com/Cable208/INFR3120-Portfolio
 
 
 
@@ -631,7 +631,7 @@ Git was used throughout the development process to track changes to the project.
 
 The completed portfolio website is deployed using GitHub Pages.
 
-Live Website:
+Live Website:https://cable208.github.io/INFR3120-Portfolio/
 
 
 
